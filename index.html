@@ -205,12 +205,35 @@ h4{font-size:17px;color:var(--blue);font-weight:700;text-transform:uppercase;let
  .hero{min-height:auto}.hero .mega{margin-top:40px}
 }
 @media (max-width:480px){.wrap{padding:0 16px}.tool{grid-template-columns:64px 1fr}.tool .n{font-size:46px}.nav nav a:nth-child(n+4){display:none}.gallery{columns:2 140px}}
+
+/* nav dropdown + booking */
+.nav nav{align-self:stretch;align-items:center;overflow:visible}
+.dd{position:relative;display:flex;align-items:center;align-self:stretch}
+.dd>a::after{content:"\25BE";margin-left:5px;font-size:10px}
+.dd .menu{position:absolute;top:100%;left:-14px;min-width:240px;background:#fff;border:1px solid var(--line);border-radius:10px;box-shadow:0 16px 36px rgba(0,0,0,.14);padding:8px;display:none;flex-direction:column;gap:2px}
+.dd:hover .menu,.dd:focus-within .menu{display:flex}
+.dd .menu a{display:block;padding:9px 12px;border-radius:6px}
+.dd .menu a:hover{background:#eef1ff}
+.nav .getin{background:var(--blue);color:#fff;border:0;border-radius:999px;padding:9px 18px;font:600 13px Poppins,sans-serif;cursor:pointer;white-space:nowrap;transition:filter .2s}
+.nav .getin:hover{filter:brightness(1.12)}
+@media (max-width:860px){.nav nav{overflow-x:auto;gap:16px}.dd{display:contents}.dd .menu{display:contents;position:static}.dd .menu a{padding:0}.dd>a::after{content:none}}
+#book{position:fixed;inset:0;z-index:60;background:rgba(5,6,15,.72);display:none;align-items:center;justify-content:center;padding:16px}
+#book.open{display:flex}
+.bk-card{position:relative;background:#fff;border-radius:14px;width:100%;max-width:460px;max-height:92vh;overflow:auto;padding:30px 28px}
+.bk-card h3{font-size:26px;font-weight:700;margin-bottom:6px}
+.bk-card>p{color:var(--muted);font-size:14px;margin-bottom:18px}
+.bk-x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--muted)}
+.bk-card label{display:block;font-size:13px;font-weight:600;margin-bottom:12px}
+.bk-card input,.bk-card textarea{display:block;width:100%;margin-top:5px;padding:11px 12px;border:1px solid var(--line);border-radius:6px;font:400 15px Poppins,sans-serif;background:#fafafa}
+.bk-card input:focus,.bk-card textarea:focus{outline:2px solid var(--blue);border-color:transparent}
+.bk-card .btn{border:0;cursor:pointer;width:100%;margin-top:4px}
+.bk-msg{font-size:14px;margin-top:12px;min-height:20px}
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <header class="nav"><div class="wrap"><a class="brand" href="#top">Moez Oueslati</a><nav>
-<a href="#about">About</a><a href="#tools">Tools</a><a href="#impact-now">01 Impact NOW</a><a href="#changenow">02 ChangeNOW Hub Tunis</a><a href="#growimpact">03 GrowImpact</a><a href="#station-i">04 Station I</a><a href="#impact-report">05 Impact Report</a><a href="#abh-v3">06 ABH x V3 Factory</a><a href="#print">Print</a><a href="#contact">Contact</a></nav></div></header>
+<a href="#about">About</a><a href="#tools">Tools</a><div class="dd"><a href="#selected-work">Selected Work</a><div class="menu"><a href="#impact-now">01 Impact NOW</a><a href="#changenow">02 ChangeNOW Hub Tunis</a><a href="#growimpact">03 GrowImpact</a><a href="#station-i">04 Station I</a><a href="#impact-report">05 Impact Report</a><a href="#abh-v3">06 ABH x V3 Factory</a></div></div><a href="#print">Printables</a><button type="button" class="getin" data-book>Get in touch</button></nav></div></header>
 
 <main id="top">
 <div class="hero"><div class="wrap">
@@ -284,10 +307,25 @@ h4{font-size:17px;color:var(--blue);font-weight:700;text-transform:uppercase;let
  <div class="eyebrow">Let's work together</div>
  <h2>Ready to be seen?<br>Let's build it together.</h2>
  <p>Strategy, campaigns, events and visual content that move people to act.</p>
- <a class="mail" href="mailto:medmoezoueslati@gmail.com">medmoezoueslati@gmail.com</a>
+ <button type="button" class="btn" data-book style="border:0;cursor:pointer;margin:6px 16px 6px 0">Get in touch</button><a class="mail" href="mailto:medmoezoueslati@gmail.com">medmoezoueslati@gmail.com</a>
  <small>Thank you · © 2026 Mohamed Moez Oueslati</small>
 </div></footer>
 
+<div id="book" role="dialog" aria-modal="true" aria-label="Book a meeting"><div class="bk-card"><button class="bk-x" type="button" aria-label="Close">&times;</button><h3>Let's book a meeting</h3><p>Tell me who you are and when suits you. I'll reply by email to confirm a time.</p><form id="bkf"><input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off"><label>Name<input name="name" required></label><label>Email<input type="email" name="email" required></label><label>Preferred day and time<input name="preferred_time" placeholder="e.g. Tuesday afternoon, around 14:00 Tunis time" required></label><label>What would you like to discuss?<textarea name="message" rows="3"></textarea></label><button class="btn" type="submit">Request a meeting</button><p class="bk-msg" aria-live="polite"></p></form></div></div>
+<script>
+(function(){var m=document.getElementById('book'),f=document.getElementById('bkf'),msg=m.querySelector('.bk-msg'),sb=f.querySelector('button[type=submit]');
+function open(){m.classList.add('open');setTimeout(function(){f.elements.name.focus()},60)}
+function close(){m.classList.remove('open')}
+Array.prototype.forEach.call(document.querySelectorAll('[data-book]'),function(b){b.addEventListener('click',function(e){e.preventDefault();open()})});
+m.addEventListener('click',function(e){if(e.target===m||e.target.className==='bk-x')close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+f.addEventListener('submit',function(e){e.preventDefault();if(f.elements._honey.value)return;var o={};new FormData(f).forEach(function(v,k){o[k]=v});
+o._subject='Meeting request from '+o.name+' (portfolio)';o._template='table';o._captcha='false';
+o._autoresponse='Thank you for reaching out. I received your meeting request and will reply by email shortly to confirm a time. Moez';
+sb.disabled=true;msg.style.color='';msg.textContent='Sending...';
+fetch('https://formsubmit.co/ajax/medmoezoueslati@gmail.com',{method:'POST',headers:{'Content-Type':'application/json',Accept:'application/json'},body:JSON.stringify(o)}).then(function(r){return r.json()}).then(function(j){if(j.success===true||j.success==='true'){msg.style.color='#0a7a3d';msg.textContent='Thank you. Your request is in and I will email you to confirm a time.';f.reset()}else{throw new Error('x')}}).catch(function(){msg.style.color='#b3261e';msg.textContent='Something went wrong. Please email medmoezoueslati@gmail.com directly.'}).then(function(){sb.disabled=false});});
+})();
+</script>
 <div id="lb" role="dialog" aria-label="Image viewer"><button class="ctl prev" aria-label="Previous">&#8592;</button><img alt=""><button class="ctl next" aria-label="Next">&#8594;</button><button class="ctl x" aria-label="Close">&#10005;</button><div class="cnt"></div></div>
 <button id="top-btn" aria-label="Back to top">&#8593;</button>
 <script>
