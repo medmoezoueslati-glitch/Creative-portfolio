@@ -48,6 +48,8 @@ h2.title{font-size:clamp(40px,6vw,76px);font-weight:700;letter-spacing:-.02em;li
 .divider{font-family:Anton,Impact,sans-serif;color:var(--blue);text-transform:uppercase;font-size:clamp(70px,15vw,210px);line-height:.88;padding:40px 0;overflow:hidden}
 .divider span{display:block;transform:rotate(-2deg)}
 .divider span+span{transform:rotate(1.5deg);margin-left:4vw}
+.divider i.ch{font-style:normal;display:inline-block;transform-origin:bottom center;transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.3,1.6,.5,1);cursor:default}
+.divider i.ch:hover{transform:translateY(-1.5vw) rotate(0deg) scale(1.06)}
 /* about */
 .about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
 .about img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:2px}
@@ -295,6 +297,9 @@ var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
 var m=document.getElementById('mega'),r=[-6,3,-2,5,-4,2,-5,4],L=[];
 'PORTFOLIO'.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;s.style.setProperty('--r',r[i]+'deg');m.appendChild(s);L.push(s)});
 if(!reduce)document.addEventListener('mousemove',function(e){if(window.scrollY>window.innerHeight)return;L.forEach(function(s,i){var b=s.getBoundingClientRect(),d=(e.clientX-(b.left+b.width/2))/window.innerWidth;s.style.setProperty('--r',(r[i]+d*10)+'deg')})});
+// section dividers: same tilted, jumpy, cursor-leaning lettering as the hero
+var DL=[];Array.prototype.forEach.call(document.querySelectorAll('.divider .wrap > span'),function(row){var t=row.textContent;row.textContent='';t.split('').forEach(function(c,i){var s=document.createElement('i');s.className='ch';s.textContent=c;var rr=[-5,3,-2,4,-3,2,-4,5][i%8];s.dataset.r=rr;s.style.setProperty('--r',rr+'deg');row.appendChild(s);DL.push(s)})});
+if(!reduce)document.addEventListener('mousemove',function(e){DL.forEach(function(s){var b=s.getBoundingClientRect();if(b.bottom<-200||b.top>window.innerHeight+200)return;var d=(e.clientX-(b.left+b.width/2))/window.innerWidth;s.style.setProperty('--r',(+s.dataset.r+d*10)+'deg')})});
 // ticker
 var items=[['2M+','views & impressions'],['7,800','new followers'],['30K+','link clicks'],['50','applications for $18.90'],['35','completed GrowImpact applications'],['105','personalized visuals for Impact NOW'],['64','page impact report']];
 var tr=document.getElementById('trk'),h='';for(var k=0;k<2;k++)items.forEach(function(x){h+='<span><b>'+x[0]+'</b> '+x[1]+'</span>'});tr.innerHTML=h;
