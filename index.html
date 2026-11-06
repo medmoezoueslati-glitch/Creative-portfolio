@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mohamed Moez Oueslati · Marketing &amp; Communication Portfolio</title>
+<meta name="description" content="Portfolio of Mohamed Moez Oueslati, marketing and communications specialist based in Tunis. Campaigns, events and visual content that move people to act.">
+<meta property="og:title" content="Mohamed Moez Oueslati · Marketing & Communication">
+<meta property="og:description" content="Strategy, campaigns, events and visual content that move people to act.">
+<style>
+@font-face{font-family:Poppins;font-weight:300;font-style:normal;font-display:swap;src:url(fonts/poppins-latin-300-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/poppins-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:500;font-style:normal;font-display:swap;src:url(fonts/poppins-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:600;font-style:normal;font-display:swap;src:url(fonts/poppins-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Poppins;font-weight:700;font-style:normal;font-display:swap;src:url(fonts/poppins-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Anton;font-weight:400;font-style:normal;font-display:swap;src:url(fonts/anton-latin-400-normal.woff2) format('woff2')}
+:root{--blue:#2552ff;--ink:#0b0d17;--bg:#efefef;--card:#fff;--muted:#555a6b;--line:#d9d9de;--navy:#14153f;--teal:#0f4a4a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+a{color:inherit}
+/* nav */
+header.nav{position:sticky;top:0;z-index:20;background:rgba(239,239,239,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:20px}
+.brand{font-weight:700;color:var(--blue);text-decoration:none;font-size:15px;letter-spacing:.2px;white-space:nowrap}
+.nav nav{display:flex;gap:22px;font-size:13px;font-weight:500;overflow-x:auto;scrollbar-width:none}
+.nav nav::-webkit-scrollbar{display:none}
+.nav nav a{text-decoration:none;color:var(--muted);white-space:nowrap}
+.nav nav a:hover{color:var(--blue)}
+/* hero */
+.hero>.wrap{width:100%}
+.hero{padding:56px 0 0;overflow:hidden;min-height:calc(100vh - 60px);display:flex;flex-direction:column;justify-content:space-between}
+.hero .id b{display:block;color:var(--blue);font-size:20px;font-weight:700;letter-spacing:.3px}
+.hero .id span{color:#4468ff;font-size:20px;font-weight:300}
+.hero .mega{font-family:Anton,Impact,sans-serif;color:var(--blue);font-size:clamp(88px,22vw,330px);line-height:.86;letter-spacing:-.01em;white-space:nowrap;text-transform:uppercase;margin:60px -2vw -.12em;display:flex;justify-content:center}
+.hero .mega span{display:inline-block;transform-origin:bottom center}
+.hero .lede{max-width:560px;font-size:18px;margin-top:28px;color:#222}
+.hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;background:var(--blue);color:#fff;text-decoration:none;padding:12px 24px;font-weight:600;font-size:14px;border-radius:2px;transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+/* sections */
+section{padding:96px 0}
+.eyebrow{font-size:13px;font-weight:700;color:var(--blue);text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px}
+h2.title{font-size:clamp(40px,6vw,76px);font-weight:700;letter-spacing:-.02em;line-height:1.05;margin-bottom:40px}
+.divider{font-family:Anton,Impact,sans-serif;color:var(--blue);text-transform:uppercase;font-size:clamp(70px,15vw,210px);line-height:.88;padding:40px 0;overflow:hidden}
+.divider span{display:block;transform:rotate(-2deg)}
+.divider span+span{transform:rotate(1.5deg);margin-left:4vw}
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:56px;align-items:start}
+.about img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:2px}
+.about h2{font-size:clamp(44px,6vw,72px);color:var(--blue);font-weight:700;line-height:1;margin-bottom:14px}
+.about h3{font-size:28px;margin-bottom:14px}
+.about h4{color:var(--blue);font-size:20px;margin:30px 0 10px}
+.about p{margin-bottom:12px;font-size:17px}
+.glance{background:var(--blue);color:#fff}
+.glance .head{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:baseline;justify-content:space-between;margin-bottom:34px}
+.glance h2{font-size:clamp(30px,4vw,48px);font-weight:700}
+.glance .sub{font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;opacity:.85}
+.glance p.intro{max-width:760px;font-size:18px;margin-bottom:40px;opacity:.95}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid4 .k{background:rgba(255,255,255,.12);padding:26px 22px}
+.grid4 .k b{display:block;font-size:clamp(36px,4.5vw,58px);line-height:1;font-weight:700}
+.grid4 .k span{display:block;margin-top:10px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.04em}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+.three .c{background:var(--ink);padding:26px}
+.three h5{font-size:24px;margin-bottom:4px}
+.three small{display:block;color:#9fb0ff;font-weight:600;font-size:12px;letter-spacing:.05em;margin-bottom:12px}
+.three ul{padding-left:18px;font-size:15px}
+.glance .src{margin-top:22px;font-size:12px;opacity:.75}
+/* tools */
+.tools-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 64px}
+.tool{display:grid;grid-template-columns:96px 1fr;gap:20px;align-items:start}
+.tool .n{font-size:68px;font-weight:700;color:var(--blue);line-height:1}
+.tool h4{font-size:20px;text-transform:uppercase;line-height:1.2;margin-bottom:6px}
+.tool p{color:var(--muted);font-size:15px;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{border:1.5px solid var(--ink);padding:3px 12px;font-size:13px;font-weight:600;border-radius:99px;background:#fff}
+/* project */
+.project{padding:80px 0;border-top:1px solid var(--line)}
+.p-head{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:40px;align-items:end;margin-bottom:44px}
+.p-title .num{font-size:clamp(60px,8vw,104px);font-weight:700;line-height:1;display:block}
+.p-title h3{font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spacing:-.02em;overflow-wrap:anywhere}
+.p-title h3{font-weight:700}
+.p-title .date{font-size:18px;margin-top:14px}
+.p-hero img{width:100%;border-radius:14px;cursor:zoom-in}
+.p-hero.poster{justify-self:end;max-width:420px}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:36px;margin-bottom:56px}
+h4{font-size:17px;color:var(--blue);font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin-bottom:8px}
+.trio p,.trio li,.duo p{font-size:16px}
+.trio ul{padding-left:20px}
+.gal-head{background:var(--navy);color:#fff;padding:36px 32px;margin-bottom:6px}
+.gal-head h3{font-size:clamp(26px,3.6vw,46px);line-height:1.1;font-weight:700}
+.gal-head p{margin-top:10px;font-size:16px;opacity:.85}
+.theme-teal .gal-head{background:var(--teal)}
+.theme-teal .gal-head p{color:#ffc43a}
+.theme-navy .gal-head p{color:#f3d34a}
+.gallery{columns:4 220px;column-gap:6px;margin-bottom:56px}
+.gallery img{width:100%;margin-bottom:6px;cursor:zoom-in;break-inside:avoid;transition:filter .2s}
+.gallery img:hover{filter:brightness(1.08)}
+.results h4.eyebrow,.impact h4.eyebrow{font-size:clamp(28px,3.5vw,44px);text-transform:none;letter-spacing:-.01em}
+.results{margin-bottom:56px}
+.results>h4{font-size:15px!important;text-transform:uppercase!important;letter-spacing:.06em!important}
+.results h4.eyebrow{font-size:15px;text-transform:uppercase;letter-spacing:.06em}
+.plats{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.plat{background:#fff;padding:24px}
+.plat h5{font-size:15px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--blue)}
+.mini{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:7px 0;border-bottom:1px solid #eee}
+.mini b{color:var(--blue);font-size:22px;font-weight:700;min-width:84px}
+.mini span{text-align:right;font-size:14px;color:#333}
+.mini:first-of-type b{font-size:36px}
+.aside{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:28px}
+.aside h5{color:var(--blue);font-size:15px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.aside ul{padding-left:20px}
+.prod{display:flex;gap:16px;align-items:baseline;margin-bottom:8px}
+.prod b{font-size:46px;color:var(--blue);line-height:1}
+.prod span{font-size:15px}
+.small{font-size:14px;color:#333}
+.impact{background:#fff;padding:44px 36px;border-top:4px solid var(--blue)}
+.impact .eyebrow{margin-bottom:22px}
+.big{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+.stat b{display:block;color:var(--blue);font-size:clamp(34px,4.6vw,60px);line-height:1;font-weight:700;letter-spacing:-.02em}
+.stat span{display:block;margin-top:8px;font-size:13px;font-weight:600;line-height:1.35}
+.big.alt .stat b{font-size:clamp(30px,4vw,48px)}
+.big.alt .stat span{font-weight:400;font-size:15px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-top:40px;padding-top:30px;border-top:2px solid var(--ink)}
+.duo.one{grid-template-columns:1fr}
+/* print */
+.print-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.print-grid figure img{width:100%;aspect-ratio:1/1;object-fit:cover;cursor:zoom-in}
+.print-grid figcaption{color:var(--blue);font-weight:700;font-size:14px;margin-top:8px}
+.print-grid .note{background:var(--blue);color:#fff;padding:28px;display:flex;flex-direction:column;justify-content:center}
+.print-grid .note b{font-size:32px;line-height:1.15;margin-bottom:12px}
+/* contact */
+.contact{background:#000;color:#fff;padding:96px 0}
+.contact .eyebrow{color:var(--blue)}
+.contact h2{font-size:clamp(40px,6.5vw,88px);line-height:1.02;letter-spacing:-.02em;margin-bottom:20px}
+.contact p{font-size:18px;opacity:.9;max-width:560px;margin-bottom:34px}
+.contact a.mail{font-size:clamp(18px,2.6vw,28px);font-weight:700;text-decoration:none;border-bottom:3px solid var(--blue);padding-bottom:4px;word-break:break-all}
+.contact small{display:block;margin-top:56px;opacity:.5;font-size:13px}
+
+#bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--blue);z-index:60}
+.nav nav a.on{color:var(--blue);font-weight:600}
+.hero .mega span{transform:rotate(var(--r,0deg));transition:transform .35s cubic-bezier(.3,1.6,.5,1);cursor:default}
+.hero .mega span:hover{transform:translateY(-4vw) rotate(0deg) scale(1.06)}
+.ticker{background:var(--ink);color:#fff;overflow:hidden;white-space:nowrap;padding:14px 0;font-weight:600;font-size:15px;letter-spacing:.03em}
+.ticker .track{display:inline-flex;gap:48px;padding-left:48px;animation:tick 38s linear infinite}
+.ticker:hover .track{animation-play-state:paused}
+.ticker b{color:#7f9bff}
+@keyframes tick{to{transform:translateX(-50%)}}
+.gal-wrap{position:relative;margin-bottom:56px}
+.gal-wrap .gallery{margin-bottom:0;max-height:440px;overflow:hidden;transition:max-height .7s ease}
+.gal-wrap.open .gallery{max-height:9000px}
+.gal-wrap:not(.open)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:200px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.more{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);z-index:2;background:var(--blue);color:#fff;border:0;padding:13px 28px;font:600 14px Poppins,sans-serif;cursor:pointer;border-radius:2px}
+.gal-wrap.open .more{position:static;transform:none;display:block;margin:22px auto 0;background:transparent;color:var(--blue);box-shadow:inset 0 0 0 2px var(--blue)}
+.gallery img{transition:transform .35s,filter .2s}
+.gallery img:hover{transform:scale(1.03);position:relative;z-index:1}
+.chartbox{background:#fff;padding:44px 36px}
+.chartbox .row{display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px;align-items:end;margin-bottom:26px}
+.chartbox h2{font-size:clamp(28px,3.6vw,44px);font-weight:700;line-height:1.1}
+.seg{display:inline-flex;border:2px solid var(--blue);border-radius:99px;overflow:hidden}
+.seg button{border:0;background:transparent;color:var(--blue);padding:9px 20px;font:600 13px Poppins,sans-serif;cursor:pointer}
+.seg button.on{background:var(--blue);color:#fff}
+.bars .b{display:grid;grid-template-columns:150px 1fr 76px;gap:14px;align-items:center;margin:12px 0;cursor:pointer;border:0;background:none;width:100%;text-align:left;font:inherit;color:inherit}
+.bars .t{height:34px;background:#eef0ff;position:relative}
+.bars .t i{position:absolute;inset:0 auto 0 0;width:0;background:var(--blue);transition:width 1s cubic-bezier(.2,.8,.2,1)}
+.bars .b:hover .t i,.bars .b:focus-visible .t i{background:var(--ink)}
+.bars .n{font-weight:700;color:var(--blue);font-size:20px;text-align:right}
+.bars .l{font-weight:600;font-size:14px}
+.chartbox .hint{font-size:13px;color:var(--muted);margin-top:14px}
+#lb .ctl{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.14);color:#fff;border:0;width:48px;height:48px;border-radius:50%;font-size:22px;cursor:pointer;line-height:1}
+#lb .ctl:hover{background:var(--blue)}
+#lb .prev{left:18px}#lb .next{right:18px}#lb .x{top:26px;right:18px;transform:none}
+#lb .cnt{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);color:#fff;font-size:13px;opacity:.8}
+#top-btn{position:fixed;right:20px;bottom:20px;width:46px;height:46px;border-radius:50%;border:0;background:var(--blue);color:#fff;font-size:20px;cursor:pointer;opacity:0;pointer-events:none;transition:opacity .3s;z-index:30}
+#top-btn.show{opacity:1;pointer-events:auto}
+.rv.in .stat,.rv.in .k{animation:pop .6s both}
+@keyframes pop{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.btn{will-change:transform}
+@media (max-width:700px){.bars .b{grid-template-columns:96px 1fr 58px;gap:8px}.bars .n{font-size:16px}.chartbox{padding:30px 18px}.gal-wrap .gallery{max-height:380px}#lb .prev{left:6px}#lb .next{right:6px}}
+@media (prefers-reduced-motion:reduce){.ticker .track{animation:none}}
+/* lightbox */
+#lb{position:fixed;inset:0;background:rgba(5,6,15,.97);display:none;align-items:center;justify-content:center;z-index:50;padding:24px;cursor:zoom-out}
+#lb.open{display:flex}
+#lb img{max-height:92vh;max-width:94vw;object-fit:contain}
+/* reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+@media (max-width:900px){
+ section{padding:64px 0}.project{padding:56px 0}
+ .about,.p-head,.trio,.duo,.tools-grid,.aside{grid-template-columns:1fr}
+ .about{gap:32px}.about img{max-width:420px}
+ .p-hero.poster{justify-self:start}
+ .grid4,.big{grid-template-columns:repeat(2,1fr)}
+ .three,.plats{grid-template-columns:1fr}
+ .print-grid{grid-template-columns:repeat(2,1fr)}
+ .nav nav{gap:16px}.impact{padding:32px 20px}
+ .duo{gap:28px}
+ .hero{min-height:auto}.hero .mega{margin-top:40px}
+}
+@media (max-width:480px){.wrap{padding:0 16px}.tool{grid-template-columns:64px 1fr}.tool .n{font-size:46px}.nav nav a:nth-child(n+4){display:none}.gallery{columns:2 140px}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<header class="nav"><div class="wrap"><a class="brand" href="#top">Moez Oueslati</a><nav>
+<a href="#about">About</a><a href="#tools">Tools</a><a href="#impact-now">01 Impact NOW</a><a href="#changenow">02 ChangeNOW Hub Tunis</a><a href="#growimpact">03 GrowImpact</a><a href="#station-i">04 Station I</a><a href="#impact-report">05 Impact Report</a><a href="#print">Print</a><a href="#contact">Contact</a></nav></div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+ <div class="id"><b>MOHAMED MOEZ OUESLATI</b><span>Marketing &amp; Communication</span></div>
+ <p class="lede">Strategy, campaigns, events and visual content that move people to act.</p>
+ <div class="cta"><a class="btn" href="#selected-work">See the work</a><a class="btn ghost" href="#contact">Get in touch</a></div>
+</div>
+<div class="mega" aria-hidden="true" id="mega"></div></div>
+
+<div class="ticker" aria-hidden="true"><div class="track" id="trk"></div></div>
+<section id="about"><div class="wrap about rv">
+ <img src="img/moez.jpg" alt="Portrait of Mohamed Moez Oueslati">
+ <div>
+  <h2>ABOUT ME</h2>
+  <h3>Mohamed Moez Oueslati</h3>
+  <p>I am a marketing and communications specialist based in Tunis. For the past two years, I've been telling the story of Tunisia's impact ecosystem at Impact Partner, turning calls for applications, workshops and events into campaigns that move people to engage, participate and take action.</p>
+  <h4>HOW I THINK</h4>
+  <p>I love the mix of strategy, creativity and a bit of growth hacking. From building campaigns from scratch to finding clever ways to get more people involved, I enjoy the whole process: creating, experimenting, distributing and measuring what works.</p>
+  <p>Over the past two years, that's meant turning event insights into content, making participants brand ambassadors through personalized visuals, and getting 50 applications with less than $20 in ad spend.</p>
+  <p>I'm at my best when communication goes beyond visibility: when it gets people talking, sharing and taking action.</p>
+ </div>
+</div></section>
+
+<section class="glance"><div class="wrap rv">
+ <div class="head"><h2>Social media performance at Impact Partner</h2><span class="sub">Cross-platform case study · LinkedIn, Facebook &amp; Instagram · Mar 2025 – Oct 2026</span></div>
+ <p class="intro">Between March 2025 and October 2026, I managed the social media presence of Impact Partner, a Tunisian social entrepreneurship accelerator and impact investment organization, across LinkedIn, Facebook and Instagram. The focus was driving applications to calls, programs and events.</p>
+ <div class="grid4">
+  <div class="k"><b>2M+</b><span>Views &amp; impressions across 3 platforms</span></div>
+  <div class="k"><b>7,800</b><span>New followers across 3 platforms</span></div>
+  <div class="k"><b>30K+</b><span>Link clicks to calls &amp; programs</span></div>
+  <div class="k"><b>100%</b><span>Organic growth on LinkedIn</span></div>
+ </div>
+ <div class="three">
+  <div class="c"><h5>LinkedIn</h5><small>28 OCT 2025 – 28 OCT 2026</small><ul><li>173.8K impressions</li><li>15.9K clicks</li><li>3,165 new followers</li><li>140 posts published</li><li>5,467 page views, 2,683 unique visitors</li></ul></div>
+  <div class="c"><h5>Facebook</h5><small>3 MAR 2025 – 29 OCT 2026</small><ul><li>1.3M views</li><li>Link clicks up 272%</li><li>Page visits up 305%, reaching 47K</li><li>5.4K content interactions</li><li>2.8K follows</li></ul></div>
+  <div class="c"><h5>Instagram</h5><small>3 MAR 2025 – 29 OCT 2026</small><ul><li>572K views</li><li>137.8K reach</li><li>Profile visits up 399%, reaching 7.5K</li><li>11.9K content interactions</li><li>476 stories and 226 posts published</li></ul></div>
+ </div>
+ <p class="src">Source: native LinkedIn, Facebook and Instagram analytics. LinkedIn data covers the last 12 months. Some Facebook and Instagram views include paid promotion.</p>
+</div></section>
+
+<section class="chart-sec" style="padding-top:0"><div class="wrap rv"><div class="chartbox">
+ <div class="row"><h2>Which campaign travelled furthest?</h2><div class="seg" role="tablist" aria-label="Platform"><button class="on" data-m="fb">Facebook</button><button data-m="ig">Instagram</button><button data-m="li">LinkedIn</button></div></div>
+ <div class="bars" id="bars"></div>
+ <p class="hint" id="hint">Views per campaign (organic + paid where applicable). Click a bar to jump to the project.</p>
+</div></div></section>
+<section id="tools"><div class="wrap">
+ <h2 class="title rv">Tools &amp; skills</h2>
+ <div class="tools-grid rv">
+  <div class="tool"><div class="n">01.</div><div><h4>Plan &amp; collaborate</h4><p>Organize projects, manage workflows and collaborate effectively.</p><div class="chips"><span>Notion</span><span>Trello</span><span>Miro</span></div></div></div>
+  <div class="tool"><div class="n">04.</div><div><h4>Design &amp; content creation</h4><p>Design visuals, edit content and create engaging multimedia.</p><div class="chips"><span>Photoshop</span><span>Illustrator</span><span>Canva</span><span>Claude</span><span>ChatGPT</span></div></div></div>
+  <div class="tool"><div class="n">02.</div><div><h4>Publish &amp; engage</h4><p>Plan, schedule and manage content across different platforms.</p><div class="chips"><span>Meta</span><span>LinkedIn</span><span>Ocoya</span></div></div></div>
+  <div class="tool"><div class="n">05.</div><div><h4>Video &amp; event coverage</h4><p>Shoot and edit reels, interviews and event recaps.</p><div class="chips"><span>CapCut</span></div></div></div>
+  <div class="tool"><div class="n">03.</div><div><h4>Email &amp; communication</h4><p>Create newsletters, automate campaigns and manage stakeholder communication.</p><div class="chips"><span>Mailchimp</span><span>Brevo</span><span>Google Workspace</span></div></div></div>
+  <div class="tool"><div class="n">06.</div><div><h4>Web &amp; digital platforms</h4><p>Manage websites and publish content.</p><div class="chips"><span>WordPress</span><span>Shopify</span><span>Lovable</span></div></div></div>
+ </div>
+</div></section>
+
+<div class="divider" id="selected-work"><div class="wrap"><span>Selected</span><span>Work</span></div></div>
+<section class="project theme-navy" id="impact-now"><div class="wrap"><div class="p-head"><div class="p-title"><span class="num">01.</span><h3>Impact NOW</h3><p class="date">May 2026</p></div><figure class="p-hero photo"><img src="img/impact-now-hero.jpg" alt="Impact NOW" loading="lazy" data-zoom></figure></div><div class="trio"><div><h4>The challenge</h4><p>Position Impact NOW as a key gathering for the impact ecosystem, communicating its value to entrepreneurs, investors, partners and other stakeholders while building visibility before, during and after the event.</p></div><div><h4>My role</h4><ul><li>Communication strategy and campaign planning</li><li>Content creation and coordination</li><li>Partner and stakeholder visibility</li><li>Event communication and storytelling</li><li>Pre-event and post-event communication</li></ul></div><div><h4>The objective</h4><p>Build awareness, mobilize the target audience, support event participation and strengthen Impact Partner's visibility within Tunisia's impact entrepreneurship ecosystem.</p></div></div><div class="gal-head"><h3>Taking Tunisia's impact ecosystem global</h3><p>164.4K Facebook views · 60 posts · 105 personalized visuals · 21 speakers  |  April – June 2026</p></div><div class="gal-wrap"><div class="gallery" data-group><img src="img/impact-now-01.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-02.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-03.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-04.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-05.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-06.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-07.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-08.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom><img src="img/impact-now-09.jpg" alt="Impact NOW campaign visual" loading="lazy" data-zoom></div><button class="more" type="button" aria-expanded="false">Show all 9 visuals</button></div><div class="results"><h4 class="eyebrow">Results in numbers · 13 April – 22 June 2026 · Organic + paid boost</h4><div class="plats"><div class="plat"><h5>Facebook</h5><div class="mini"><b>164.4K</b><span>Views</span></div><div class="mini"><b>63.8K</b><span>Reach</span></div><div class="mini"><b>508</b><span>Content interactions</span></div><div class="mini"><b>1.4K</b><span>Link clicks</span></div><div class="mini"><b>4.2K</b><span>Page visits</span></div><div class="mini"><b>140</b><span>Follows</span></div></div><div class="plat"><h5>Instagram</h5><div class="mini"><b>130.1K</b><span>Views</span></div><div class="mini"><b>44.7K</b><span>Reach</span></div><div class="mini"><b>2.2K</b><span>Content interactions</span></div><div class="mini"><b>406</b><span>Link clicks</span></div><div class="mini"><b>1.7K</b><span>Page visits</span></div><div class="mini"><b>308</b><span>Follows</span></div></div><div class="plat"><h5>LinkedIn</h5><div class="mini"><b>31.3K</b><span>Page impressions</span></div><div class="mini"><b>515</b><span>Reactions</span></div><div class="mini"><b>1.9K</b><span>Clicks</span></div><div class="mini"><b>7.9%</b><span>Organic engagement rate</span></div></div></div><div class="aside"><div><h5>Campaign highlights</h5><ul><li>Speakers and sessions showcase</li><li>Event coverage</li><li>Event recaps and key takeaways</li><li>Community engagement and user generated content</li></ul></div><div><h5>Content production</h5><div class="prod"><b>60</b><span>Social media posts, including 8 videos, 5 interviews and 3 recaps</span></div><h5 style="margin-top:18px">Paid boost</h5><p class="small">Startup exposition call for applications, 23–26 Apr 2026: $0.04 per landing page visit (avg.) · 154.7K views · 92.4K people reached · 1,479 link clicks · 698 landing page visits · 2 boosted posts at $8/day for 3 days each</p></div></div></div><div class="impact"><h4 class="eyebrow">Results &amp; impact</h4><div class="big"><div class="stat"><b>294.5K</b><span>Facebook + Instagram views (organic + paid)</span></div><div class="stat"><b>31.3K</b><span>LinkedIn impressions (organic)</span></div><div class="stat"><b>154.7K</b><span>of those views from 2 Meta boosts (paid)</span></div><div class="stat"><b>$0.04</b><span>per landing page visit (paid)</span></div></div><div class="duo"><div><h4>The challenge</h4><p>A meaningful event can bring people together, but its impact depends on how far its story travels. Through Impact NOW, the goal was to make Impact Partner more visible and bring Tunisia's social entrepreneurship ecosystem closer to international conversations.</p></div><div><h4>My approach</h4><p>I brought the event to life across Facebook, Instagram, and LinkedIn, introducing speakers through dedicated visual cards, sharing the experience in real time, and capturing the ideas and voices shaping the conversation through interviews, videos, and recaps. By inviting the community to participate and share its own perspectives, I turned event communication into an ongoing conversation, helping position Impact Partner as a connector of people, ideas, and opportunities in social entrepreneurship.</p></div></div></div></div></section><section class="project theme-teal" id="changenow"><div class="wrap"><div class="p-head"><div class="p-title"><span class="num">02.</span><h3>ChangeNOW Hub Tunis pre-event</h3><p class="date">December 2025</p></div><figure class="p-hero photo"><img src="img/changenow-hero.jpg" alt="ChangeNOW Hub Tunis pre-event" loading="lazy" data-zoom></figure></div><div class="trio"><div><h4>The challenge</h4><p>Position ChangeNOW Hub Tunis as a platform connecting Tunisia's impact ecosystem with international networks, showcasing local solutions and creating opportunities for collaboration.</p></div><div><h4>My role</h4><ul><li>Communication strategy and campaign planning</li><li>Content creation and coordination</li><li>Partner and stakeholder visibility</li><li>Event storytelling and communication</li><li>Pre-event and post-event coverage</li></ul></div><div><h4>The objective</h4><p>Strengthen Impact Partner's visibility, engage local and international stakeholders, and position Tunisia as a growing hub for social and environmental innovation in the Mediterranean.</p></div></div><div class="gal-head"><h3>Pre-event</h3><p></p></div><div class="gal-wrap"><div class="gallery" data-group><img src="img/changenow-01.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-02.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-03.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-04.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-05.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-06.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-07.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-08.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-09.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-10.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-11.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-12.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-13.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom><img src="img/changenow-14.jpg" alt="ChangeNOW Hub Tunis pre-event campaign visual" loading="lazy" data-zoom></div><button class="more" type="button" aria-expanded="false">Show all 14 visuals</button></div><div class="results"><h4 class="eyebrow">Results in numbers · December 2025 – February 2026</h4><div class="plats"><div class="plat"><h5>Facebook</h5><div class="mini"><b>354.4K</b><span>Views</span></div><div class="mini"><b>137.1K</b><span>Reach</span></div><div class="mini"><b>1.5K</b><span>Content interactions</span></div><div class="mini"><b>1.9K</b><span>Link clicks</span></div><div class="mini"><b>13K</b><span>Page visits</span></div><div class="mini"><b>1.3K</b><span>Follows</span></div></div><div class="plat"><h5>Instagram</h5><div class="mini"><b>158.9K</b><span>Views</span></div><div class="mini"><b>7.8K</b><span>Reach</span></div><div class="mini"><b>4.6K</b><span>Content interactions</span></div><div class="mini"><b>24</b><span>Link clicks</span></div><div class="mini"><b>1.4K</b><span>Page visits</span></div><div class="mini"><b>354</b><span>Follows</span></div></div><div class="plat"><h5>LinkedIn</h5><div class="mini"><b>63.2K</b><span>Impressions</span></div><div class="mini"><b>660</b><span>Interactions</span></div><div class="mini"><b>8.3K</b><span>Clicks</span></div><div class="mini"><b>14.2%</b><span>Engagement rate</span></div><div class="mini"><b>1.2K</b><span>New followers</span></div></div></div><div class="aside"><div><h5>Campaign highlights</h5><ul><li>Speakers and sessions showcase</li><li>Event coverage</li><li>Event recaps and key takeaways</li><li>Collaboration with media partners for media coverage</li><li>Cross-posting with ecosystem actors</li></ul></div><div><h5>Content production</h5><div class="prod"><b>26</b><span>Social media posts, including 9 videos, 4 interviews and 2 recaps</span></div><div class="prod"><b>2</b><span>Media collaborations: Yaluna &amp; Wayout</span></div></div></div></div><div class="impact"><h4 class="eyebrow">Results &amp; impact</h4><div class="big"><div class="stat"><b>513.3K</b><span>Facebook + Instagram views (organic + paid)</span></div><div class="stat"><b>63.2K</b><span>LinkedIn impressions (organic)</span></div><div class="stat"><b>50</b><span>Impact4Change applications (paid)</span></div><div class="stat"><b>$0.38</b><span>per application, $18.90 total (paid)</span></div></div><div class="duo"><div><h4>The challenge</h4><p>A competition is only as strong as the entrepreneurs who apply to it. As part of the ChangeNOW Hub Tunis pre-event campaign, the Impact4Change competition needed to reach impact-driven founders beyond Impact Partner's existing network and turn their interest into applications, on a minimal budget.</p></div><div><h4>My approach</h4><p>I ran a targeted paid ads campaign directing entrepreneurs to a dedicated registration page. With a budget of just $6 per day, the campaign generated 17,380 views, reached over 12,300 people, and drove 1,139 landing page visits, converting into 50 applications at under $0.40 each. It proved that precise targeting can deliver results far beyond the size of the budget.</p></div></div></div></div></section><section class="project theme-teal" id="growimpact"><div class="wrap"><div class="p-head"><div class="p-title"><span class="num">03.</span><h3>GrowImpact</h3><p class="date">July 2025 – Oct 2026</p></div><figure class="p-hero poster"><img src="img/growimpact-hero.jpg" alt="GrowImpact" loading="lazy" data-zoom></figure></div><div class="trio"><div><h4>The challenge</h4><p>Helping social businesses address growth barriers and build stronger, more sustainable business models.</p></div><div><h4>My role</h4><p>Planning the phased campaign across Facebook, Instagram and LinkedIn, creating recruitment, Matching Fund and "Meet the Jury" content, and covering bootcamps through "Startups in Action" stories.</p></div><div><h4>The objective</h4><p>Enable participating businesses to strengthen their capacity, pursue growth opportunities, and deepen their social impact.</p></div></div><div class="gal-head"><h3>Building GrowImpact's audience</h3><p>35 applications · 8 startups selected · 10K+ reached  |  July 2025 – Oct 2026</p></div><div class="gal-wrap"><div class="gallery" data-group><img src="img/growimpact-01.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-02.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-03.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-04.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-05.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-06.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-07.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-08.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-09.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-10.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-11.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-12.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-13.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-14.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-15.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom><img src="img/growimpact-16.jpg" alt="GrowImpact campaign visual" loading="lazy" data-zoom></div><button class="more" type="button" aria-expanded="false">Show all 16 visuals</button></div><div class="results"><h4 class="eyebrow">Results in numbers · July 2025 – October 2026</h4><div class="plats"><div class="plat"><h5>Facebook</h5><div class="mini"><b>41.6K</b><span>Views</span></div><div class="mini"><b>311</b><span>Content interactions</span></div><div class="mini"><b>118</b><span>Shares</span></div><div class="mini"><b>522</b><span>Link clicks</span></div></div><div class="plat"><h5>Instagram</h5><div class="mini"><b>51.4K</b><span>Views</span></div><div class="mini"><b>1.5K</b><span>Content interactions</span></div><div class="mini"><b>420</b><span>Shares</span></div><div class="mini"><b>65</b><span>Link clicks</span></div><div class="mini"><b>330</b><span>Page visits</span></div><div class="mini"><b>373</b><span>Follows</span></div></div><div class="plat"><h5>LinkedIn</h5><div class="mini"><b>28.4K</b><span>Views</span></div><div class="mini"><b>334</b><span>Content interactions</span></div><div class="mini"><b>40</b><span>Reposts</span></div><div class="mini"><b>3.2K</b><span>Link clicks</span></div><div class="mini"><b>11.4%</b><span>Click rate</span></div><div class="mini"><b>282</b><span>Reactions</span></div></div></div><div class="aside"><div><h5>Campaign highlights</h5><ul><li>Matching Fund call: 17.2K views on Instagram</li><li>88% from non-followers</li><li>339 new followers from one organic post</li><li>LinkedIn carousels: up to 75% click rate</li><li>GrowImpact 2.0 launch: 4.9K Facebook views</li></ul></div><div><h5>Content production</h5><div class="prod"><b>70</b><span>Social media posts across Facebook, Instagram and LinkedIn</span></div><div class="prod"><b>373</b><span>New followers on Instagram, all organic</span></div></div></div></div><div class="impact"><h4 class="eyebrow">Results &amp; impact</h4><div class="big"><div class="stat"><b>35</b><span>completed applications</span></div><div class="stat"><b>10K+</b><span>accounts reached by the Matching Fund call (88% non-followers)</span></div><div class="stat"><b>51.4K</b><span>Instagram views</span></div><div class="stat"><b>373</b><span>new Instagram followers, all organic</span></div></div><div class="duo"><div><h4>The challenge</h4><p>GrowImpact supports Tunisian impact startups through acceleration, expert support, and access to funding. Each phase depends on the right people seeing the right message at the right time. The goal was to reach beyond Impact Partner's existing followers and turn calls for applications into real engagement, in a crowded space full of competing opportunities.</p></div><div><h4>My approach</h4><p>I ran a phased campaign across Facebook, Instagram, and LinkedIn, matched to each step of the program. For the Investment Readiness Program, a six-post recruitment campaign and a dedicated info session generated 35 completed applications. From these, 21 startups were shortlisted and 8 were selected after a pitch and bootcamp, which I covered with a video recap and photo highlights. In 2026, the Matching Fund campaign paired a clear call for applications with a "Meet the Jury" series to build credibility, reaching over 10,000 accounts and bringing in 339 new followers organically.</p></div></div></div></div></section><section class="project theme-navy" id="station-i"><div class="wrap"><div class="p-head"><div class="p-title"><span class="num">04.</span><h3>Station I</h3><p class="date">June 2025 – Sept 2026</p></div><figure class="p-hero poster"><img src="img/station-hero.jpg" alt="Station I" loading="lazy" data-zoom></figure></div><div class="trio"><div><h4>The challenge</h4><p>Helping an invitation-only gathering of investors, corporates and impact entrepreneurs build a public voice and a recognizable identity across changing formats and venues.</p></div><div><h4>My role</h4><p>Planning the communication strategy, designing the Station I visual identity and content, managing speaker and partner visibility, and covering each session with photo and video recaps.</p></div><div><h4>The objective</h4><p>Position Station I as Tunisia's meeting point for impact capital, mobilize investors and corporates, and carry each session's conversation beyond the room.</p></div></div><div class="gal-head"><h3>From private capital to impact capital</h3><p>4 sessions · 4 venues · 2 white papers  |  June 2025 – Sept 2026</p></div><div class="gal-wrap"><div class="gallery" data-group><img src="img/station-01.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-02.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-03.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-04.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-05.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-06.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-07.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-08.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-09.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-10.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-11.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-12.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-13.jpg" alt="Station I campaign visual" loading="lazy" data-zoom><img src="img/station-14.jpg" alt="Station I campaign visual" loading="lazy" data-zoom></div><button class="more" type="button" aria-expanded="false">Show all 14 visuals</button></div><div class="results"><h4 class="eyebrow">Results in numbers · June 2025 – September 2026</h4><div class="plats"><div class="plat"><h5>Facebook</h5><div class="mini"><b>15.4K</b><span>Views</span></div><div class="mini"><b>9.2K</b><span>Reach</span></div><div class="mini"><b>69</b><span>Content interactions</span></div><div class="mini"><b>12</b><span>Shares</span></div><div class="mini"><b>55</b><span>Reactions</span></div><div class="mini"><b>8</b><span>Posts</span></div></div><div class="plat"><h5>Instagram</h5><div class="mini"><b>17.1K</b><span>Views</span></div><div class="mini"><b>6.9K</b><span>Reach</span></div><div class="mini"><b>227</b><span>Content interactions</span></div><div class="mini"><b>45</b><span>Shares</span></div><div class="mini"><b>164</b><span>Likes</span></div><div class="mini"><b>15</b><span>Posts</span></div></div><div class="plat"><h5>LinkedIn</h5><div class="mini"><b>5.5K</b><span>Impressions</span></div><div class="mini"><b>960</b><span>Content interactions</span></div><div class="mini"><b>3</b><span>Reposts</span></div><div class="mini"><b>893</b><span>Link clicks</span></div><div class="mini"><b>16.2%</b><span>Click rate</span></div><div class="mini"><b>63</b><span>Reactions</span></div></div></div><div class="aside"><div><h5>Campaign highlights</h5><ul><li>CSR Meets Impact invite: 3.5K views on Instagram</li><li>4 sessions across 4 venues</li><li>Masterclass call: 5.4K views on Facebook</li><li>Investment workshop: 44.3% LinkedIn engagement rate</li><li>Impact Report launch: 1.6K document clicks</li></ul></div><div><h5>Content production</h5><div class="prod"><b>31</b><span>Social media posts across Facebook, Instagram and LinkedIn</span></div><div class="prod"><b>38K</b><span>Views &amp; impressions across Facebook, Instagram and LinkedIn</span></div></div></div></div><div class="impact"><h4 class="eyebrow">Results &amp; impact</h4><div class="big"><div class="stat"><b>4</b><span>Station I editions across 4 venues</span></div><div class="stat"><b>9.2K</b><span>accounts reached on Facebook</span></div><div class="stat"><b>44.3%</b><span>engagement rate on LinkedIn workshop recap</span></div><div class="stat"><b>2</b><span>white papers published from event outputs</span></div></div><div class="duo"><div><h4>The challenge</h4><p>Station I brings investors, corporates, support organizations, and impact entrepreneurs together around one question: how to move capital toward impact. Most editions were invitation-only, held in small rooms with a selected audience. The challenge was to give these closed-door conversations a public life and build Station I into a recognizable brand across four editions, four venues, and changing formats, from a Slush'D side event in Djerba to CSR evenings, masterclasses, and fireside chats in Tunis.</p></div><div><h4>My approach</h4><p>I built a repeatable campaign for this initiative: a branded announcement, speaker and quote cards, then recaps through photo carousels and short videos, and two white papers capturing the key outputs. Every visual carried the same Station I identity, adapted to each partner and venue. On LinkedIn, recap carousels drove 734 of 893 clicks and a 44.3% engagement rate on the investment workshop. Facebook carried reach with 9.2K accounts, while Instagram generated the most interaction. The CSR Meets Impact edition also launched Impact Partner's 10 Years of Impact report, extending the conversation well beyond the room.</p></div></div></div></div></section><section class="project theme-blue" id="impact-report"><div class="wrap"><div class="p-head"><div class="p-title"><span class="num">05.</span><h3>Impact Report</h3><p class="date">November 2025</p></div><figure class="p-hero poster"><img src="img/report-hero.jpg" alt="Impact Report" loading="lazy" data-zoom></figure></div><div class="trio"><div><h4>The challenge</h4><p>Helping ten years of programs, data and founder stories become one clear, credible document that donors, partners and entrepreneurs actually read.</p></div><div><h4>My role</h4><p>Designing the 64-page layout and data visuals and structuring the content across ten chapters, while the MEAL Manager led the data collection and analysis. I also led the launch communication at Station I.</p></div><div><h4>The objective</h4><p>Show a decade of measurable impact, strengthen trust with donors and partners, and set the agenda for Impact Partner's next ten years.</p></div></div><div class="impact"><h4 class="eyebrow">Results &amp; impact</h4><div class="big"><div class="stat"><b>64</b><span>pages designed and laid out</span></div><div class="stat"><b>10</b><span>chapters and 10 founder stories</span></div><div class="stat"><b>339</b><span>beneficiaries surveyed behind the data</span></div><div class="stat"><b>1.6K</b><span>document clicks on LinkedIn at launch</span></div></div><h4 class="eyebrow" style="margin-top:36px">Key findings the report brought to life</h4><div class="big alt"><div class="stat"><b>215+</b><span>startups accelerated since 2014</span></div><div class="stat"><b>2,500</b><span>jobs created and sustained</span></div><div class="stat"><b>67%</b><span>of supported startups led by women</span></div><div class="stat"><b>25.99M</b><span>TND in investment mobilized</span></div></div><div class="duo one"><div><h4>Our approach</h4><p>In collaboration with Impact Partner's MEAL Manager, who led the data work, I designed the layout and structured ten years of program data, survey results and interviews into ten chapters, from methodology to gender inclusion and financial impact, then gave every key number its own data visual so readers can grasp the impact in minutes. Ten founder stories put faces to the figures. The report launched at Station I's CSR Meets Impact edition and drove 1.6K document clicks on LinkedIn.</p></div></div></div></div></section>
+
+<div class="divider" id="print"><div class="wrap"><span>Print</span><span>ables</span></div></div>
+<section style="padding-top:20px"><div class="wrap">
+ <h2 class="title rv">Print in action</h2>
+ <p class="rv" style="margin:-20px 0 34px;font-size:18px">Merchandise, large format, brand stationery and event signage</p>
+ <div class="print-grid rv" data-group><figure><img src="img/print-01.jpg" alt="Hackathon tote bag" loading="lazy" data-zoom><figcaption>Hackathon tote bag</figcaption></figure><figure><img src="img/print-02.jpg" alt="GrowImpact roll-up" loading="lazy" data-zoom><figcaption>GrowImpact roll-up</figcaption></figure><figure><img src="img/print-03.jpg" alt="Business cards" loading="lazy" data-zoom><figcaption>Business cards</figcaption></figure><figure><img src="img/print-04.jpg" alt="Hackathon merchandise" loading="lazy" data-zoom><figcaption>Hackathon merchandise</figcaption></figure><figure><img src="img/print-05.jpg" alt="Impact NOW desk wrap" loading="lazy" data-zoom><figcaption>Impact NOW desk wrap</figcaption></figure><figure><img src="img/print-06.jpg" alt="Roll-up GrowImpact" loading="lazy" data-zoom><figcaption>Roll-up GrowImpact</figcaption></figure><figure><img src="img/print-07.jpg" alt="Impact NOW desk" loading="lazy" data-zoom><figcaption>Impact NOW desk</figcaption></figure><figure><img src="img/print-08.jpg" alt="ChangeNOW badge" loading="lazy" data-zoom><figcaption>ChangeNOW badge</figcaption></figure><figure><img src="img/print-09.jpg" alt="Impact NOW participants in session" loading="lazy" data-zoom><figcaption>Impact NOW participants in session</figcaption></figure><div class="note"><b>Designed to be used</b><span>On the table, in the hand, in the room.</span></div></div>
+</div></section>
+</main>
+
+<footer class="contact" id="contact"><div class="wrap">
+ <div class="eyebrow">Let's work together</div>
+ <h2>Ready to be seen?<br>Let's build it together.</h2>
+ <p>Strategy, campaigns, events and visual content that move people to act.</p>
+ <a class="mail" href="mailto:medmoezoueslati@gmail.com">medmoezoueslati@gmail.com</a>
+ <small>Thank you · © 2026 Mohamed Moez Oueslati</small>
+</div></footer>
+
+<div id="lb" role="dialog" aria-label="Image viewer"><button class="ctl prev" aria-label="Previous">&#8592;</button><img alt=""><button class="ctl next" aria-label="Next">&#8594;</button><button class="ctl x" aria-label="Close">&#10005;</button><div class="cnt"></div></div>
+<button id="top-btn" aria-label="Back to top">&#8593;</button>
+<script>
+(function(){
+var $=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+// hero lettering: tilted, jumps on hover, leans toward the cursor
+var m=document.getElementById('mega'),r=[-6,3,-2,5,-4,2,-5,4],L=[];
+'PORTFOLIO'.split('').forEach(function(c,i){var s=document.createElement('span');s.textContent=c;s.style.setProperty('--r',r[i]+'deg');m.appendChild(s);L.push(s)});
+if(!reduce)document.addEventListener('mousemove',function(e){if(window.scrollY>window.innerHeight)return;L.forEach(function(s,i){var b=s.getBoundingClientRect(),d=(e.clientX-(b.left+b.width/2))/window.innerWidth;s.style.setProperty('--r',(r[i]+d*10)+'deg')})});
+// ticker
+var items=[['2M+','views & impressions'],['7,800','new followers'],['30K+','link clicks'],['50','applications for $18.90'],['35','completed GrowImpact applications'],['105','personalized visuals for Impact NOW'],['64','page impact report']];
+var tr=document.getElementById('trk'),h='';for(var k=0;k<2;k++)items.forEach(function(x){h+='<span><b>'+x[0]+'</b> '+x[1]+'</span>'});tr.innerHTML=h;
+// progress bar, scrollspy, back to top
+var bar=document.getElementById('bar'),tb=document.getElementById('top-btn');
+var links=$('.nav nav a'),secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+function onS(){var y=window.scrollY,H=document.documentElement.scrollHeight-window.innerHeight;bar.style.width=(H>0?y/H*100:0)+'%';tb.classList.toggle('show',y>900);
+ var cur=-1;secs.forEach(function(s,i){if(s&&s.getBoundingClientRect().top<window.innerHeight*.35)cur=i});links.forEach(function(a,i){a.classList.toggle('on',i===cur)});
+ if(cur>=0){var a=links[cur],nv=a.parentNode;if(nv.scrollWidth>nv.clientWidth)nv.scrollLeft=a.offsetLeft-40}}
+window.addEventListener('scroll',onS,{passive:true});onS();
+tb.onclick=function(){window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})};
+// gallery expand
+$('.more').forEach(function(b){b.onclick=function(){var w=b.parentNode,o=w.classList.toggle('open');b.setAttribute('aria-expanded',o);var n=w.querySelectorAll('img').length;b.textContent=o?'Show fewer':'Show all '+n+' visuals';if(!o)w.scrollIntoView({block:'center'})}});
+// lightbox with groups
+var lb=document.getElementById('lb'),li=lb.querySelector('img'),cnt=lb.querySelector('.cnt'),grp=[],ix=0,tx=null;
+function show(){var im=grp[ix];li.src=im.currentSrc||im.src;li.alt=im.alt;cnt.textContent=grp.length>1?(ix+1)+' / '+grp.length:'';lb.querySelector('.prev').style.display=lb.querySelector('.next').style.display=grp.length>1?'':'none'}
+function go(d){ix=(ix+d+grp.length)%grp.length;show()}
+function close(){lb.classList.remove('open')}
+document.addEventListener('click',function(e){var t=e.target;
+ if(t.matches('[data-zoom]')){var g=t.closest('[data-group]');grp=g?$('[data-zoom]',g):[t];ix=grp.indexOf(t);show();lb.classList.add('open')}
+ else if(t.closest('.prev')){go(-1)}else if(t.closest('.next')){go(1)}else if(lb.classList.contains('open')&&(t===lb||t.closest('.x')))close()});
+document.addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')go(-1);if(e.key==='ArrowRight')go(1)});
+lb.addEventListener('touchstart',function(e){tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(d<0?1:-1);tx=null});
+// magnetic buttons
+if(!reduce)$('.btn').forEach(function(b){b.addEventListener('mousemove',function(e){var r=b.getBoundingClientRect();b.style.transform='translate('+((e.clientX-r.left-r.width/2)*.18)+'px,'+((e.clientY-r.top-r.height/2)*.3)+'px)'});b.addEventListener('mouseleave',function(){b.style.transform=''})});
+// count-up
+function count(el){var t=el.textContent,mt=t.match(/^([^0-9]*)([0-9][0-9,]*\.?[0-9]*)(.*)$/);if(!mt||el.dataset.done)return;el.dataset.done=1;
+ var raw=mt[2],dec=(raw.split('.')[1]||'').length,to=parseFloat(raw.replace(/,/g,'')),comma=raw.indexOf(',')>-1,t0=null,dur=1300;
+ function f(n){return (comma?Math.round(n).toLocaleString('en-US'):n.toFixed(dec))}
+ function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1),e=1-Math.pow(1-p,3);el.textContent=mt[1]+f(to*e)+mt[3];if(p<1)requestAnimationFrame(step)}
+ if(reduce)return;requestAnimationFrame(step)}
+var io2='IntersectionObserver' in window&&new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){count(x.target);io2.unobserve(x.target)}})},{threshold:.6});
+if(io2)$('.stat b,.k b,.mini b,.prod b').forEach(function(n){io2.observe(n)});
+// reveal
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.08});$('.rv').forEach(function(n){io.observe(n)})}else{$('.rv').forEach(function(n){n.classList.add('in')})}
+// compare chart
+var D={fb:[['Impact NOW','#impact-now',164.4],['ChangeNOW Hub Tunis','#changenow',354.4],['GrowImpact','#growimpact',41.6],['Station I','#station-i',15.4]],
+ ig:[['Impact NOW','#impact-now',130.1],['ChangeNOW Hub Tunis','#changenow',158.9],['GrowImpact','#growimpact',51.4],['Station I','#station-i',17.1]],
+ li:[['Impact NOW','#impact-now',31.3],['ChangeNOW Hub Tunis','#changenow',63.2],['GrowImpact','#growimpact',28.4],['Station I','#station-i',5.5]]};
+var T={fb:'Facebook views per campaign (organic + paid where applicable).',ig:'Instagram views per campaign (organic + paid where applicable).',li:'LinkedIn impressions per campaign (organic). GrowImpact shows views.'};
+var bars=document.getElementById('bars'),hint=document.getElementById('hint');
+function draw(k){var mx=Math.max.apply(null,D[k].map(function(x){return x[2]}));
+ bars.innerHTML=D[k].map(function(x){return '<button class="b" data-to="'+x[1]+'"><span class="l">'+x[0]+'</span><span class="t"><i data-w="'+(x[2]/mx*100)+'"></i></span><span class="n">'+x[2]+'K</span></button>'}).join('');
+ hint.textContent=T[k]+' Click a bar to jump to the project.';
+ requestAnimationFrame(function(){requestAnimationFrame(function(){$('i',bars).forEach(function(i){i.style.width=i.dataset.w+'%'})})})}
+$('.seg button').forEach(function(b){b.onclick=function(){$('.seg button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');draw(b.dataset.m)}});
+bars.addEventListener('click',function(e){var b=e.target.closest('.b');if(b)document.querySelector(b.dataset.to).scrollIntoView({behavior:reduce?'auto':'smooth'})});
+draw('fb');
+})();
+</script>
+</body>
+</html>
